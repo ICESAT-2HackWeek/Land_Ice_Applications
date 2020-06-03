@@ -1,27 +1,16 @@
-# Sample Project
+# Clouds_and_data_filtering
+Tutorial investigating how clouds can affect surface detection in ATL03 and ATL06
 
-This is as an example on how teams can structure their project repositories. Thanks to Lindsey Heagey and Joachim Meyer for the template, provided originally for [Geohackweek](https://github.com/geohackweek/sample_project_repository).
+This tutorial covers some of the reasons you might see weird results over ice when clouds start to blot out the surface signals.  The learning objectives I'd like to get to are:
+- Understanding how clouds affect laser-altimetry signals
+- Recognizing how these effects are manifest in the ATL06 product
+- Gaining familiarity with the ATL06 parameters that can identify cloudy returns
+This part of the tutorial will focus on clouds that cause gross errors in surface-height estimates.  
 
-## Files
+Along the way, we'll:
 
-* `.gitignore`
-<br> Globally ignored files by `git` for the project.
-* `environment.yml`
-<br> `conda` environment description needed to run this project.
-* `README.md`
-<br> Description of the project. [Sample](https://geohackweek.github.io/wiki/github_project_management.html#project-guidelines)
+- develop a simple function for reading ICESat-2 data from hdf-5 files
 
-## Folders
-
-### `contributors`
-Each team member has it's own folder under contributors, where he/she can
-work on their contribution. Having a dedicated folder for one-self helps to 
-prevent conflicts when merging with master.
-
-### `notebooks`
-Notebooks that are considered delivered results for the project should go in
-here.
-
-### `scripts`
-Helper utilities that are shared with the team
-
+If time allows, I'll also present on subtler effects caused by forward scattering of laser light by thin clouds, which can lead to smaller elevation biases.  The objectives of this part of the tutorial will be:
+- Understanding how forward scattering of laser light by clouds can introduce biases in surface-height estimates
+- Tools for identifying returns affected by forward scattering.
