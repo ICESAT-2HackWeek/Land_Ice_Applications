@@ -1,16 +1,25 @@
-# Clouds_and_data_filtering
-Tutorial investigating how clouds can affect surface detection in ATL03 and ATL06
+# Land ice applications: Getting familiar with ICESat-2 products over land ice
 
-This tutorial covers some of the reasons you might see weird results over ice when clouds start to blot out the surface signals.  The learning objectives I'd like to get to are:
-- Understanding how clouds affect laser-altimetry signals
-- Recognizing how these effects are manifest in the ATL06 product
-- Gaining familiarity with the ATL06 parameters that can identify cloudy returns
-This part of the tutorial will focus on clouds that cause gross errors in surface-height estimates.  
+## 1. Introduction
+In this tutorial, we're going to take a first look at some of the ICESat-2 data over land ice.  We're going to demonstrate how ALT06 segments correspond to ATL03 photons, and demonstrate the repeat-track structure of ATL06 data. '
 
-Along the way, we'll:
+## 1.1 Learning goals
+Our learning goals include understanding:
+* how ice-sheet surfaces are represented by ATL03 photons
+* how ATL06 elevations correpond to ATL03 photon clouds
+* how small-scale features appear in ATL06
+* the repeat structure of ATL06
+* how cross-track slope can affect elevation differences
+and we'll also give:
+* a sneak peak at the ATL11 product.
 
-- develop a simple function for reading ICESat-2 data from hdf-5 files
+## 1.2 Tools presented and developed:
+Along the way, we'll present:
+* A reader for ATL03
+* A reader for ATL06
+* Geographic projections with pyproj
+* Filtering ATL06 elevations using slope and quality parameters
+* Mapping surface elevations and profiles with matplotlib
+* Visualizing ATL03 and ATL06 together.
 
-If time allows, I'll also present on subtler effects caused by forward scattering of laser light by thin clouds, which can lead to smaller elevation biases.  The objectives of this part of the tutorial will be:
-- Understanding how forward scattering of laser light by clouds can introduce biases in surface-height estimates
-- Tools for identifying returns affected by forward scattering.
+Content for this tutorial is in the notebooks/land_ice_applications.ipynb notebook
